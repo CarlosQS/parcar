@@ -33,24 +33,28 @@ public class Car
         slowDown();
         moveDown();
         accelerate();
-        car.printGarage();
+        printGarage(g);
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
     }    
 
+    public static void printGarage(Garage garage) {
+    	garage.printGarage();
+    }
+    
     /**
      * Accelerate the car
      * @throws InterruptedException 
      */
-    public void accelerate() throws InterruptedException{
+    public static void accelerate() throws InterruptedException{
         String c = new String("*");
         String space = new String(" ");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
         	c = space.concat(c);
-        	Thread.sleep(1000);
+        	Thread.sleep(100);
         }
     }
     
@@ -58,13 +62,13 @@ public class Car
      * Slow down the car
      * @throws InterruptedException 
      */
-    public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    public static void slowDown() throws InterruptedException{
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
         	c = c.substring(1);
-        	Thread.sleep(1000);
+        	Thread.sleep(100);
         }
     	System.out.println();
     }    
@@ -73,15 +77,15 @@ public class Car
      * Move the car downwards
      * @throws InterruptedException 
      */    
-    public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    public static void moveDown() throws InterruptedException{
+    	String c = new String("\t\t\t\t  *");
+    	for(int i=0; i<5; i++)
         {
     		if(i!=4)
     			System.out.println(c);
     		else 
     			System.out.print(c);
-        	Thread.sleep(1000);
+        	Thread.sleep(100);
         }
     }
     
